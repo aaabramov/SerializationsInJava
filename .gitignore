@@ -1,2 +1,3 @@
 /target/
-SerializationExamples.iml
+*.iml
+.idea

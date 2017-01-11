@@ -1,21 +1,19 @@
-package test;
+package com.aabramov.demo;
 
 import java.io.File;
 
 /**
- * Created by abrasha on 11/13/15.
+ * @author Andrii Abramov on 11/13/15.
  */
 public class FileAccessor {
-
+    
     public static File getFile(String name) throws Exception {
-
-        File file = new File("src/main/resources/" + name);
-        if (!file.exists()){
+        
+        File file = new File(name);
+        if (!file.exists()) {
             file.createNewFile();
         }
-
         return file;
-
     }
-
+    
 }

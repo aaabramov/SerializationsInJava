@@ -1,64 +1,50 @@
-package model;
+package com.aabramov.model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 /**
- * Created by abrasha on 11/13/15.
+ * @author Andrii Abramov on 11/13/15.
  */
-
 @XmlRootElement
 public class Song implements Serializable {
-
+    
     private String name;
     private String singer;
-
-
-
-    public Song(){
+    
+    
+    public Song() {
     }
-
-
-
-    @Override
-    public String toString(){
-        return "Song{" +
-                "name='" + name + '\'' +
-                ", singer='" + singer + '\'' +
-                '}';
-    }
-
-
-
-    public Song(String name, String singer){
+    
+    public Song(String name, String singer) {
         this.name = name;
         this.singer = singer;
     }
-
-
-
-    public String getName(){
+    
+    @Override
+    public String toString() {
+        return String.format("Song{name='%s', singer='%s'}", name, singer);
+    }
+    
+    public String getName() {
         return name;
     }
-
-
-
+    
+    
     @XmlElement
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
-
-
-
-    public String getSinger(){
+    
+    
+    public String getSinger() {
         return singer;
     }
-
-
-
+    
+    
     @XmlElement
-    public void setSinger(String singer){
+    public void setSinger(String singer) {
         this.singer = singer;
     }
 }
